@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Body Reset Coach</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="hero" aria-labelledby="page-title">
+        <div class="hero__content">
+          <p class="eyebrow">21 Day Body Reset</p>
+          <h1 id="page-title">Consistency is the product.</h1>
+          <p class="hero__copy">
+            Coach kebiasaan harian untuk membantu target acara 3 minggu: protein cukup,
+            langkah konsisten, dan bebas minuman manis tanpa logging kalori yang melelahkan.
+          </p>
+          <div class="hero__actions" aria-label="Aksi utama">
+            <a class="button button--primary" href="#today">Mulai check-in</a>
+            <a class="button button--ghost" href="#challenge">Lihat challenge</a>
+          </div>
+        </div>
+        <aside class="goal-card" aria-label="Ringkasan target berat">
+          <span class="goal-card__label">Target event</span>
+          <div class="goal-card__weights">
+            <strong id="current-weight">82.4kg</strong>
+            <span>→</span>
+            <strong>79.0kg</strong>
+          </div>
+          <div class="progress-bar" aria-label="Progress menuju target" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="35">
+            <span></span>
+          </div>
+          <p>3.4 kg menuju tubuh yang terasa lebih ringan dan baju lebih fit.</p>
+        </aside>
+      </section>
+
+      <section class="dashboard" id="today" aria-label="Dashboard hari ini">
+        <article class="panel daily-score">
+          <div>
+            <p class="eyebrow">Evening score</p>
+            <h2><span id="daily-score">0</span>/100</h2>
+          </div>
+          <p id="score-message">Centang habit untuk melihat skor harian.</p>
+          <div class="xp-pill"><span id="xp-total">0</span> XP hari ini</div>
+        </article>
+
+        <article class="panel habit-panel">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Daily accountability</p>
+              <h2>Checklist Hari Ini</h2>
+            </div>
+            <span class="streak-badge" id="streak-badge">Bronze</span>
+          </div>
+          <div class="habit-list" id="habit-list"></div>
+        </article>
+
+        <article class="panel protein-panel">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Protein tracker</p>
+              <h2><span id="protein-total">0</span>g / 100g</h2>
+            </div>
+            <button class="button button--small" id="reset-protein" type="button">Reset</button>
+          </div>
+          <div class="progress-bar progress-bar--protein" role="progressbar" aria-label="Protein hari ini" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+            <span id="protein-progress"></span>
+          </div>
+          <div class="food-grid" id="food-grid"></div>
+        </article>
+
+        <article class="panel metrics-panel">
+          <p class="eyebrow">Visible progress</p>
+          <h2>Outcome Snapshot</h2>
+          <div class="metric-grid">
+            <div>
+              <span>Steps</span>
+              <strong>8.000</strong>
+            </div>
+            <div>
+              <span>Water</span>
+              <strong>2.5L</strong>
+            </div>
+            <div>
+              <span>Workout</span>
+              <strong>Tue / Thu</strong>
+            </div>
+            <div>
+              <span>Sleep</span>
+              <strong>7h+</strong>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section class="challenge" id="challenge" aria-labelledby="challenge-title">
+        <div class="section-heading section-heading--center">
+          <div>
+            <p class="eyebrow">Gamified reset</p>
+            <h2 id="challenge-title">Pilih ritme challenge</h2>
+          </div>
+        </div>
+        <div class="challenge-grid">
+          <article class="challenge-card">
+            <span>7 hari</span>
+            <h3>Reset Cepat</h3>
+            <p>Bangun momentum dan hilangkan minuman berkalori tinggi.</p>
+          </article>
+          <article class="challenge-card challenge-card--active">
+            <span>14 hari</span>
+            <h3>Habit Builder</h3>
+            <p>Kunci protein, langkah, air putih, dan jadwal strength training.</p>
+          </article>
+          <article class="challenge-card">
+            <span>21 hari</span>
+            <h3>Body Reset</h3>
+            <p>Fokus pada konsistensi sampai perubahan wajah, perut, dan energi terlihat.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
